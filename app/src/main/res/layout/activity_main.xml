@@ -4,16 +4,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
+    android:gravity="center_horizontal"
     android:padding="24dp">
 
-    <TextView
-        android:id="@+id/textMessage"
-        android:layout_width="wrap_content"
+    <!-- Affirmation display with favorite button next to it -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to the Affirmation App 💖"
-        android:textSize="20sp"
-        android:textAlignment="center" />
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/textAffirmation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Welcome to the Affirmation App 💖"
+            android:textSize="20sp"
+            android:textAlignment="viewStart"
+            android:maxLines="5"
+            android:ellipsize="end"/>
+
+        <ImageButton
+            android:id="@+id/buttonFavorite"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:contentDescription="Favorite"
+            android:src="@drawable/ic_star_border" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/buttonYou"
@@ -51,6 +72,13 @@
         android:layout_marginTop="10dp" />
 
     <Button
+        android:id="@+id/buttonViewFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⭐ View Favorites"
+        android:layout_marginTop="16dp"/>
+
+    <Button
         android:id="@+id/buttonViewHistory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -77,5 +105,6 @@
         android:layout_height="wrap_content"
         android:text="About This App"
         android:layout_marginTop="16dp"/>
+
 
 </LinearLayout>

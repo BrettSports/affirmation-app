@@ -19,6 +19,9 @@
             android:name=".HistoryActivity"
             android:exported="false" />
         <activity
+            android:name=".FavoritesActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="Affirmation App"
