@@ -12,19 +12,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center_vertical"
+        android:gravity="top"
         android:paddingBottom="16dp">
 
         <TextView
             android:id="@+id/textAffirmation"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_weight="1"
             android:text="Welcome to the Affirmation App 💖"
             android:textSize="20sp"
             android:textAlignment="viewStart"
-            android:maxLines="5"
-            android:ellipsize="end"/>
+            android:scrollbars="vertical"
+            android:padding="16dp"
+            android:background="@drawable/affirmation_border" />
 
         <ImageButton
             android:id="@+id/buttonFavorite"
@@ -35,7 +36,6 @@
             android:contentDescription="Favorite"
             android:src="@drawable/ic_star_border" />
     </LinearLayout>
-
     <Button
         android:id="@+id/buttonYou"
         android:layout_width="wrap_content"

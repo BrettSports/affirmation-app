@@ -123,6 +123,7 @@ class MainActivity : AppCompatActivity() {
 
         try {
             val textView = findViewById<TextView>(R.id.textAffirmation)
+            textView.movementMethod = android.text.method.ScrollingMovementMethod()
             favoriteButton = findViewById(R.id.buttonFavorite)
 
             // Load data first
