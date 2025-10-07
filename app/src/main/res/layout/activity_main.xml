@@ -1,110 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:padding="24dp">
+    android:fillViewport="true">
 
-    <!-- Affirmation display with favorite button next to it -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="top"
-        android:paddingBottom="16dp">
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
 
-        <TextView
-            android:id="@+id/textAffirmation"
-            android:layout_width="0dp"
-            android:layout_height="200dp"
-            android:layout_weight="1"
-            android:text="Welcome to the Affirmation App 💖"
-            android:textSize="20sp"
-            android:textAlignment="viewStart"
-            android:scrollbars="vertical"
-            android:padding="16dp"
-            android:background="@drawable/affirmation_border" />
+        <!-- Affirmation display with favorite button next to it -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="top"
+            android:paddingBottom="16dp">
 
-        <ImageButton
-            android:id="@+id/buttonFavorite"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="12dp"
-            android:background="?android:selectableItemBackgroundBorderless"
-            android:contentDescription="Favorite"
-            android:src="@drawable/ic_star_border" />
+            <TextView
+                android:id="@+id/textAffirmation"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:text="Welcome to the Affirmation App 💖"
+                android:textSize="20sp"
+                android:textAlignment="viewStart"
+                android:scrollbars="vertical"
+                android:padding="16dp"
+                android:background="@drawable/affirmation_border" />
+
+            <ImageButton
+                android:id="@+id/buttonFavorite"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="12dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:contentDescription="Favorite"
+                android:src="@drawable/ic_star_border" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonYou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You 💖"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/buttonReflections"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reflections 🪞"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/buttonAspirations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aspirations 🚀"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/buttonHorny"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hornery 🔥"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/buttonMystery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mystery"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/buttonViewFavorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⭐ View Favorites"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/buttonViewHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📜 View History"
+            android:layout_marginTop="32dp" />
+
+        <Button
+            android:id="@+id/buttonClearHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🗑️ Clear History"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/buttonReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔁 Reset Affirmations"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/buttonAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About This App"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"/>
+
     </LinearLayout>
-    <Button
-        android:id="@+id/buttonYou"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="You 💖"
-        android:layout_marginTop="20dp" />
-
-    <Button
-        android:id="@+id/buttonReflections"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reflections 🪞"
-        android:layout_marginTop="10dp" />
-
-    <Button
-        android:id="@+id/buttonAspirations"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Aspirations 🚀"
-        android:layout_marginTop="10dp" />
-
-    <Button
-        android:id="@+id/buttonHorny"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hornery 🔥"
-        android:layout_marginTop="10dp" />
-
-    <Button
-        android:id="@+id/buttonMystery"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mystery"
-        android:layout_marginTop="10dp" />
-
-    <Button
-        android:id="@+id/buttonViewFavorites"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="⭐ View Favorites"
-        android:layout_marginTop="16dp"/>
-
-    <Button
-        android:id="@+id/buttonViewHistory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="📜 View History"
-        android:layout_marginTop="32dp" />
-
-    <Button
-        android:id="@+id/buttonClearHistory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="🗑️ Clear History"
-        android:layout_marginTop="16dp" />
-
-    <Button
-        android:id="@+id/buttonReset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="🔁 Reset Affirmations"
-        android:layout_marginTop="16dp"/>
-
-    <Button
-        android:id="@+id/buttonAbout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="About This App"
-        android:layout_marginTop="16dp"/>
-
-
-</LinearLayout>
+</ScrollView>
