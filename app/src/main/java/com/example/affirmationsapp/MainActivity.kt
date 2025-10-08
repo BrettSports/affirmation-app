@@ -124,6 +124,15 @@ class MainActivity : AppCompatActivity() {
         try {
             val textView = findViewById<TextView>(R.id.textAffirmation)
             textView.movementMethod = android.text.method.ScrollingMovementMethod()
+            textView.setOnTouchListener { v, event ->
+                v.parent.requestDisallowInterceptTouchEvent(true)
+                when (event.action and android.view.MotionEvent.ACTION_MASK) {
+                    android.view.MotionEvent.ACTION_UP -> {
+                        v.parent.requestDisallowInterceptTouchEvent(false)
+                    }
+                }
+                false
+            }
             favoriteButton = findViewById(R.id.buttonFavorite)
 
             // Load data first
@@ -204,9 +213,10 @@ class MainActivity : AppCompatActivity() {
 
             findViewById<Button>(R.id.buttonReset).setOnClickListener {
                 val original = loadCategoryMapFromJson(this)
-                remainingMap = loadRemainingAffirmations(this, original)
-                saveRemainingAffirmations(this, original)
+                remainingMap = original.mapValues { it.value.toMutableList() }.toMutableMap()
+                saveRemainingAffirmations(this, remainingMap)
                 textView.text = "Affirmations reset!"
+                textView.scrollTo(0, 0)
             }
 
             findViewById<Button>(R.id.buttonAbout).setOnClickListener {
@@ -234,6 +244,7 @@ class MainActivity : AppCompatActivity() {
                 Log.d(TAG, "Selected random affirmation: $random")
 
                 textView.text = random
+                textView.scrollTo(0, 0)
                 lastShownAffirmation = random
 
                 // Update favorite button state

@@ -13,34 +13,38 @@
         android:padding="24dp">
 
         <!-- Affirmation display with favorite button next to it -->
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="top"
             android:paddingBottom="16dp">
 
             <TextView
                 android:id="@+id/textAffirmation"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_weight="1"
                 android:text="Welcome to the Affirmation App 💖"
                 android:textSize="20sp"
                 android:textAlignment="viewStart"
                 android:scrollbars="vertical"
                 android:padding="16dp"
+                android:paddingEnd="80dp"
+                android:paddingBottom="80dp"
                 android:background="@drawable/affirmation_border" />
 
             <ImageButton
                 android:id="@+id/buttonFavorite"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="12dp"
-                android:background="?android:selectableItemBackgroundBorderless"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="12dp"
+                android:background="@drawable/fab_background"
                 android:contentDescription="Favorite"
-                android:src="@drawable/ic_star_border" />
-        </LinearLayout>
+                android:src="@drawable/ic_star_border"
+                android:elevation="6dp"
+                android:scaleType="center"
+                android:padding="12dp"
+                android:tint="#FFFFFF" />
+        </FrameLayout>
 
         <Button
             android:id="@+id/buttonYou"
